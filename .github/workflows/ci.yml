@@ -35,8 +35,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
-      - uses: gradle/actions/setup-gradle@v4
-      - run: gradle test
+      - run: mvn test
         working-directory: services/api-java
       - run: mvn test
         working-directory: services/partner-integration-java
@@ -60,6 +59,8 @@ jobs:
         working-directory: pipelines
       - run: python -m pytest
         working-directory: pipelines
+      - run: make ingest-sample
+      - run: make release-report
 
   cpp:
     runs-on: ubuntu-latest
@@ -68,3 +69,9 @@ jobs:
       - run: cmake -S services/matcher-cpp -B services/matcher-cpp/build
       - run: cmake --build services/matcher-cpp/build
       - run: ctest --test-dir services/matcher-cpp/build --output-on-failure
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose config

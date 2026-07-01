@@ -13,7 +13,7 @@ def test_current_signal_has_adas_mismatch() -> None:
 
 
 def test_generate_replay_returns_requested_steps() -> None:
-    replay = generate_replay(ReplayRequest(route_id="route-test", steps=3, start_speed=20))
+    replay = generate_replay(ReplayRequest(route_id="route-test", steps=3, start_speed=26))
 
     assert len(replay) == 3
     assert replay[0].active_route_id == "route-test"
@@ -25,4 +25,3 @@ def test_load_partner_scenario_replay() -> None:
 
     assert replay[0].active_route_id == "route-dc-demo-002"
     assert replay[0].adas_mismatch_flag is True
-

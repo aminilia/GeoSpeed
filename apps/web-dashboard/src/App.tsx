@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
+import type { Feature, LineString } from "geojson";
 import {
   confidenceColor,
   qualityIssues,
@@ -73,7 +74,7 @@ function Header({ activePage, selectedSegment }: { activePage: PageKey; selected
   return (
     <header className="workspace-header">
       <div>
-        <span className="eyebrow">Synthetic operations workspace</span>
+        <span className="eyebrow">Sample operations workspace</span>
         <h2>{title}</h2>
       </div>
       <div className="header-summary" aria-label="Selected segment">
@@ -108,7 +109,7 @@ function OverviewPage({
       </section>
 
       <section className="panel">
-        <PanelHeader title="Coverage" caption="Synthetic trace coverage by segment" />
+        <PanelHeader title="Coverage" caption="Sample trace coverage by segment" />
         <BarChart
           values={roadSegments.map((segment) => ({
             label: segment.id.replace("seg-syn-", "S"),
@@ -139,7 +140,7 @@ function MapExplorer({
         <DashboardMap selectedSegmentId={selectedSegmentId} onSelectSegment={onSelectSegment} />
       </section>
       <aside className="map-inspector">
-        <PanelHeader title="Map Layers" caption="Synthetic signs and colored road confidence" />
+        <PanelHeader title="Map Layers" caption="Sample signs and colored road confidence" />
         <Legend />
         <SegmentList selectedSegmentId={selectedSegmentId} onSelectSegment={onSelectSegment} compact />
       </aside>
@@ -167,7 +168,7 @@ function SegmentDetail({
         </div>
       </section>
       <section className="panel">
-        <PanelHeader title="Segment Picker" caption="Inspect another synthetic segment" />
+        <PanelHeader title="Segment Picker" caption="Inspect another sample segment" />
         <SegmentList selectedSegmentId={segment.id} onSelectSegment={onSelectSegment} compact />
       </section>
       <section className="panel">
@@ -203,7 +204,7 @@ function QualityIssues() {
         <CountChart values={issueCounts} />
       </section>
       <section className="panel wide">
-        <PanelHeader title="Quality Work Queue" caption="Synthetic review backlog" />
+        <PanelHeader title="Quality Work Queue" caption="Sample review backlog" />
         <IssueTable issues={qualityIssues} emptyText="No open quality issues." />
       </section>
     </div>
@@ -215,7 +216,7 @@ function ReleaseReadiness() {
   return (
     <div className="page-grid release-grid">
       <section className="panel release-panel">
-        <PanelHeader title="Release Gate" caption="Synthetic release candidate health" />
+        <PanelHeader title="Release Gate" caption="Sample release candidate health" />
         <Gauge value={readiness} />
       </section>
       <section className="panel wide">
@@ -250,10 +251,11 @@ function DashboardMap({
       return;
     }
 
+    const mapCenter: [number, number] = [-74.006, 40.71275];
     const map = new maplibregl.Map({
       container: mapContainer.current,
       style: "https://demotiles.maplibre.org/style.json",
-      center: [-74.006, 40.71275],
+      center: mapCenter,
       zoom: 15.5
     });
 
@@ -262,16 +264,17 @@ function DashboardMap({
     map.on("load", () => {
       roadSegments.forEach((segment) => {
         const sourceId = `segment-${segment.id}`;
+        const segmentFeature: Feature<LineString, { id: string }> = {
+          type: "Feature",
+          properties: { id: segment.id },
+          geometry: {
+            type: "LineString",
+            coordinates: segment.polyline
+          }
+        };
         map.addSource(sourceId, {
           type: "geojson",
-          data: {
-            type: "Feature",
-            properties: { id: segment.id },
-            geometry: {
-              type: "LineString",
-              coordinates: segment.polyline
-            }
-          }
+          data: segmentFeature
         });
         map.addLayer({
           id: sourceId,
@@ -294,8 +297,9 @@ function DashboardMap({
         markerElement.setAttribute("aria-label", `${sign.label} sign ${sign.id}`);
         markerElement.addEventListener("click", () => onSelectSegment(sign.segmentId));
 
+        const signCoordinate: [number, number] = sign.coordinate;
         new maplibregl.Marker({ element: markerElement, anchor: "bottom" })
-          .setLngLat(sign.coordinate)
+          .setLngLat(signCoordinate)
           .setPopup(new maplibregl.Popup().setText(`${sign.id}: ${sign.label}`))
           .addTo(map);
       });

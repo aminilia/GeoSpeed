@@ -2,7 +2,7 @@
 
 ## Goal
 
-Help teams inspect synthetic sign observations, validate road matches, and understand model confidence before promoting geospatial updates.
+Help teams inspect sample or open-data-compatible sign observations, validate road matches, and understand model confidence before promoting geospatial updates.
 
 ## Initial Users
 
@@ -14,4 +14,3 @@ Help teams inspect synthetic sign observations, validate road matches, and under
 
 - No proprietary datasets in source control
 - No live production integrations in local defaults
-

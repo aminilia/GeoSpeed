@@ -12,7 +12,7 @@ lint:
 
 build:
 	cd apps/web-dashboard && npm run build
-	cd services/api-java && gradle bootJar
+	cd services/api-java && mvn package
 	cmake -S services/matcher-cpp -B services/matcher-cpp/build
 	cmake --build services/matcher-cpp/build
 
@@ -20,7 +20,7 @@ test-web:
 	cd apps/web-dashboard && npm install && npm test -- --run
 
 test-java:
-	cd services/api-java && gradle test
+	cd services/api-java && mvn test
 
 test-python:
 	cd services/ml-python && python -m pip install -r requirements-dev.txt && python -m pytest

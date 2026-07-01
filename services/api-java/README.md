@@ -21,8 +21,8 @@ When the service is running:
 ## Development
 
 ```bash
-gradle test
-gradle bootRun
+mvn test
+mvn spring-boot:run
 ```
 
 The first repository implementation is intentionally in memory and uses only synthetic sample data.

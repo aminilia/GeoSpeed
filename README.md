@@ -1,6 +1,6 @@
 # GeoSpeed AI Platform
 
-[![CI](https://img.shields.io/badge/ci-placeholder-lightgrey)](#) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/amini/geospeed-ai-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/amini/geospeed-ai-platform/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 GeoSpeed AI Platform is a production-style geospatial AI and data-product monorepo for road speed-limit intelligence. It answers: what is the best available speed-limit value for each road segment, what evidence supports it, how confident are we, and is the segment ready for release into a production map-data product?
 
@@ -44,6 +44,20 @@ The first demo uses small checked-in sample files under `data/sample`. The archi
 - Optional WSDOT, Caltrans PeMS, or Mapillary-compatible sign observations
 
 No proprietary or paid data is required.
+
+## Current Implementation Status
+
+| Area | Status | Notes |
+| --- | --- | --- |
+| Web dashboard | Implemented | React, TypeScript, MapLibre, sample/open-data-compatible workflows |
+| Auto head-unit simulator | Implemented | Mock route replay, speed-limit alerts, ADAS mismatch, partner debug panel |
+| Java product API | Implemented | Spring Boot API with Maven and OpenAPI support |
+| Partner integration API | Implemented | Partner scenarios, issues, triage, feature requests, launch readiness |
+| Python ML service | Implemented | FastAPI baseline speed-limit inference and evaluation |
+| Vehicle signals service | Implemented | FastAPI VSS-style synthetic signal replay for simulator use |
+| C++ matcher | Implemented | C++17 MapLibre-independent road/sign matching library and CLI |
+| Pipelines | Implemented | Sample ingestion, release candidate generation, validation, report |
+| Docker / CI | Implemented | Compose config validation, service tests/builds, pipeline smoke |
 
 ## Quick Start
 
@@ -105,7 +119,7 @@ Place dashboard screenshots in `docs/assets/` as the UI evolves.
 
 ## GeoSpeed Auto FDE Extension
 
-GeoSpeed Auto FDE adds an open automotive partner-integration layer for Forward Deployed Engineering demos. It includes an in-vehicle head-unit simulator, partner issue triage API, launch-readiness workflow, COVESA VSS-style synthetic vehicle signals, ADAS mismatch scenarios, and infotainment debug views.
+GeoSpeed Auto FDE adds an open automotive partner-integration layer for Forward Deployed Engineering demos. It includes an in-vehicle head-unit simulator, partner issue triage API, launch-readiness workflow, COVESA VSS-style simulated vehicle signals, ADAS mismatch scenarios, and infotainment debug views.
 
 The Auto FDE extension demonstrates automotive partner-integration workflows for speed-limit intelligence, in-vehicle navigation, ADAS validation, vehicle-signal replay, partner issue triage, and launch readiness using an open SDK-style simulator and public/sample data.
 
@@ -142,8 +156,15 @@ Additional local services:
 Geo Auto / FDE resume highlights:
 
 - Automotive partner integration workflows and issue triage.
-- Synthetic vehicle signal replay with VSS-style contracts.
+- Simulated vehicle signal replay with VSS-style contracts.
 - ADAS speed-limit mismatch and infotainment rendering scenarios.
 - Launch readiness review process spanning data quality, SDK integration, and partner signoff.
 
 
+<<<<<<< HEAD
+=======
+- Full-stack geospatial AI product architecture
+- Segment-level data-quality policy and release workflow
+- Polyglot implementation across Python, Java, C++, and TypeScript
+- Open-data-first design with synthetic fallback data only for privacy-sensitive traces and simulator examples
+>>>>>>> 1ae1335 (fix some CIs)
