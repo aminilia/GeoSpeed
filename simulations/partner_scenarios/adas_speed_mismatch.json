@@ -1,0 +1,32 @@
+{
+  "scenario_id": "adas_speed_mismatch",
+  "partner_id": "partner-nova-auto",
+  "route_id": "route-dc-demo-002",
+  "description": "ADAS cruise-control set speed is above the inferred speed limit.",
+  "expected_behavior": "Vehicle signal service marks ADAS mismatch and simulator shows speed-limit assist warning.",
+  "vehicle_signals": [
+    {
+      "timestamp": "2026-07-01T12:03:00Z",
+      "lat": 38.9069,
+      "lon": -77.0370,
+      "heading": 36,
+      "vehicle_speed": 37,
+      "adas_cruise_speed_set": 45,
+      "adas_cruise_active": true,
+      "speed_limit_assist_active": true,
+      "current_gear": "D"
+    }
+  ],
+  "road_segments": ["dc_road_002"],
+  "speed_limit_data": {
+    "dc_road_002": {
+      "speed_limit": 35,
+      "speed_unit": "mph",
+      "confidence_score": 0.71,
+      "evidence_sources": ["mapillary_compatible_sample", "road_class_prior"]
+    }
+  },
+  "issue_flags": ["ADAS_SIGNAL_MISMATCH"],
+  "launch_readiness_impact": "requires_partner_triage"
+}
+

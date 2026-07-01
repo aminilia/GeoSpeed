@@ -1,0 +1,30 @@
+{
+  "scenario_id": "stale_map_data_launch_blocker",
+  "partner_id": "partner-europa-mobility",
+  "route_id": "route-stale-map-001",
+  "description": "Segment speed-limit evidence is stale and blocks launch readiness.",
+  "expected_behavior": "Launch readiness marks the route as blocked until refreshed source data is supplied.",
+  "vehicle_signals": [
+    {
+      "timestamp": "2026-07-01T12:08:00Z",
+      "lat": 40.7484,
+      "lon": -73.9857,
+      "heading": 55,
+      "vehicle_speed": 31,
+      "current_gear": "D"
+    }
+  ],
+  "road_segments": ["nyc_road_001"],
+  "speed_limit_data": {
+    "nyc_road_001": {
+      "speed_limit": 25,
+      "speed_unit": "mph",
+      "confidence_score": 0.86,
+      "freshness_score": 0.42,
+      "evidence_sources": ["nyc_open_data_sample"]
+    }
+  },
+  "issue_flags": ["STALE_OBSERVATION"],
+  "launch_readiness_impact": "launch_blocker"
+}
+

@@ -1,0 +1,24 @@
+{
+  "observation": {
+    "lon": -74.006,
+    "lat": 40.7128,
+    "heading": 45.0,
+    "confidence": 0.9
+  },
+  "segments": [
+    {
+      "id": "synthetic-road-a",
+      "polyline": [
+        { "lon": -74.0063, "lat": 40.7125 },
+        { "lon": -74.0057, "lat": 40.7131 }
+      ]
+    },
+    {
+      "id": "synthetic-road-b",
+      "polyline": [
+        { "lon": -74.0100, "lat": 40.7200 },
+        { "lon": -74.0110, "lat": 40.7210 }
+      ]
+    }
+  ]
+}

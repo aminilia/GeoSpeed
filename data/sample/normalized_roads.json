@@ -1,0 +1,96 @@
+[
+  {
+    "segment_id": "dc_road_001",
+    "source": "osm_sample",
+    "road_name": "Sample Main Street NW",
+    "road_class": "residential",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -77.0368,
+          38.9071
+        ],
+        [
+          -77.0362,
+          38.9076
+        ]
+      ]
+    },
+    "direction": "both",
+    "known_speed_limit": 25,
+    "inferred_speed_limit": null,
+    "speed_unit": "mph",
+    "confidence_score": 0.0,
+    "freshness_score": 0.0,
+    "conflict_score": 0.0,
+    "release_ready": false,
+    "evidence_sources": [
+      "osm_maxspeed"
+    ],
+    "issue_flags": [],
+    "last_updated": "2026-01-01"
+  },
+  {
+    "segment_id": "dc_road_002",
+    "source": "overture_sample",
+    "road_name": "Sample Connector Avenue",
+    "road_class": "secondary",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -77.0372,
+          38.9068
+        ],
+        [
+          -77.0366,
+          38.9074
+        ]
+      ]
+    },
+    "direction": "northbound",
+    "known_speed_limit": null,
+    "inferred_speed_limit": null,
+    "speed_unit": "mph",
+    "confidence_score": 0.0,
+    "freshness_score": 0.0,
+    "conflict_score": 0.0,
+    "release_ready": false,
+    "evidence_sources": [],
+    "issue_flags": [],
+    "last_updated": "2025-08-15"
+  },
+  {
+    "segment_id": "nyc_road_001",
+    "source": "nyc_open_data_sample",
+    "road_name": "Sample Brooklyn Street",
+    "road_class": "primary",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -73.9857,
+          40.7484
+        ],
+        [
+          -73.9849,
+          40.7489
+        ]
+      ]
+    },
+    "direction": "both",
+    "known_speed_limit": 30,
+    "inferred_speed_limit": null,
+    "speed_unit": "mph",
+    "confidence_score": 0.0,
+    "freshness_score": 0.0,
+    "conflict_score": 0.0,
+    "release_ready": false,
+    "evidence_sources": [
+      "osm_maxspeed"
+    ],
+    "issue_flags": [],
+    "last_updated": "2024-06-01"
+  }
+]

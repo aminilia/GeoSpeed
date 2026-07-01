@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "sign_id": "sign_dc_001",
+        "detected_speed_limit": 25,
+        "detection_confidence": 0.94,
+        "heading": 45,
+        "image_id": "synthetic_dc_img_001",
+        "capture_date": "2026-01-15",
+        "source": "mapillary_compatible_sample",
+        "matched_segment_id": "dc_road_001",
+        "road_match_confidence": 0.91
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0365, 38.90735]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sign_id": "sign_dc_002",
+        "detected_speed_limit": 35,
+        "detection_confidence": 0.82,
+        "heading": 35,
+        "image_id": "synthetic_dc_img_002",
+        "capture_date": "2025-08-20",
+        "source": "mapillary_compatible_sample",
+        "matched_segment_id": "dc_road_002",
+        "road_match_confidence": 0.64
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.0368, 38.9071]
+      }
+    }
+  ]
+}
+

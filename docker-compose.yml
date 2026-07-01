@@ -1,0 +1,50 @@
+services:
+  web-dashboard:
+    build:
+      context: .
+      dockerfile: infra/docker/web-dashboard.Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api-java
+      - ml-python
+
+  api-java:
+    build:
+      context: .
+      dockerfile: infra/docker/api-java.Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      ML_SERVICE_URL: http://ml-python:8000
+
+  ml-python:
+    build:
+      context: .
+      dockerfile: infra/docker/ml-python.Dockerfile
+    ports:
+      - "8000:8000"
+
+  partner-integration-java:
+    build:
+      context: .
+      dockerfile: infra/docker/partner-integration.Dockerfile
+    ports:
+      - "8090:8090"
+
+  vehicle-signals-python:
+    build:
+      context: .
+      dockerfile: infra/docker/vehicle-signals.Dockerfile
+    ports:
+      - "8010:8010"
+
+  auto-headunit-simulator:
+    build:
+      context: .
+      dockerfile: infra/docker/auto-headunit.Dockerfile
+    ports:
+      - "5174:5174"
+    depends_on:
+      - partner-integration-java
+      - vehicle-signals-python

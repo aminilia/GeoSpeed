@@ -1,0 +1,5 @@
+sign_id,latitude,longitude,sign_type,observed_at
+SYN-001,40.71280,-74.00600,speed_limit_25,2026-01-01T12:00:00Z
+SYN-002,40.71310,-74.00580,stop,2026-01-01T12:02:00Z
+SYN-003,40.71350,-74.00550,yield,2026-01-01T12:04:00Z
+

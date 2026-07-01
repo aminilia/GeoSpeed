@@ -1,0 +1,29 @@
+{
+  "scenario_id": "infotainment_missing_data",
+  "partner_id": "partner-europa-mobility",
+  "route_id": "route-missing-speed-001",
+  "description": "Route contains a segment without reliable speed-limit evidence.",
+  "expected_behavior": "Head unit suppresses legal speed display and shows fallback debug metadata.",
+  "vehicle_signals": [
+    {
+      "timestamp": "2026-07-01T12:05:00Z",
+      "lat": 38.9072,
+      "lon": -77.0371,
+      "heading": 20,
+      "vehicle_speed": 28,
+      "current_gear": "D"
+    }
+  ],
+  "road_segments": ["dc_road_002"],
+  "speed_limit_data": {
+    "dc_road_002": {
+      "speed_limit": null,
+      "speed_unit": "mph",
+      "confidence_score": 0.35,
+      "evidence_sources": ["road_class_prior"]
+    }
+  },
+  "issue_flags": ["MAP_DATA_GAP", "LOW_CONFIDENCE_INFERENCE"],
+  "launch_readiness_impact": "blocks_infotaiment_signoff"
+}
+

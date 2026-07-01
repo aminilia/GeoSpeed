@@ -1,0 +1,37 @@
+{
+  "scenario_id": "oem_speed_alert_demo",
+  "partner_id": "partner-nova-auto",
+  "route_id": "route-dc-demo-001",
+  "description": "Vehicle exceeds inferred 25 mph speed limit on a high-confidence residential segment.",
+  "expected_behavior": "Head unit displays posted speed limit and non-blocking speed alert.",
+  "vehicle_signals": [
+    {
+      "timestamp": "2026-07-01T12:00:00Z",
+      "lat": 38.9071,
+      "lon": -77.0368,
+      "heading": 45,
+      "vehicle_speed": 23,
+      "current_gear": "D"
+    },
+    {
+      "timestamp": "2026-07-01T12:00:05Z",
+      "lat": 38.90735,
+      "lon": -77.0365,
+      "heading": 45,
+      "vehicle_speed": 32,
+      "current_gear": "D"
+    }
+  ],
+  "road_segments": ["dc_road_001"],
+  "speed_limit_data": {
+    "dc_road_001": {
+      "speed_limit": 25,
+      "speed_unit": "mph",
+      "confidence_score": 0.94,
+      "evidence_sources": ["dc_open_data_sample", "osm_maxspeed"]
+    }
+  },
+  "issue_flags": [],
+  "launch_readiness_impact": "none"
+}
+

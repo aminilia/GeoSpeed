@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "dc_road_001",
+        "source": "osm_sample",
+        "road_name": "Sample Main Street NW",
+        "road_class": "residential",
+        "direction": "both",
+        "osm_maxspeed": 25,
+        "last_updated": "2026-01-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-77.0368, 38.9071], [-77.0362, 38.9076]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "dc_road_002",
+        "source": "overture_sample",
+        "road_name": "Sample Connector Avenue",
+        "road_class": "secondary",
+        "direction": "northbound",
+        "osm_maxspeed": null,
+        "last_updated": "2025-08-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-77.0372, 38.9068], [-77.0366, 38.9074]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "nyc_road_001",
+        "source": "nyc_open_data_sample",
+        "road_name": "Sample Brooklyn Street",
+        "road_class": "primary",
+        "direction": "both",
+        "osm_maxspeed": 30,
+        "last_updated": "2024-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-73.9857, 40.7484], [-73.9849, 40.7489]]
+      }
+    }
+  ]
+}
+

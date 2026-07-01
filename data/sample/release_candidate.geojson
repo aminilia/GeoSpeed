@@ -1,0 +1,127 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "dc_road_001",
+        "source": "osm_sample",
+        "road_name": "Sample Main Street NW",
+        "road_class": "residential",
+        "direction": "both",
+        "known_speed_limit": 25,
+        "inferred_speed_limit": 25,
+        "speed_unit": "mph",
+        "confidence_score": 1.0,
+        "freshness_score": 1.0,
+        "conflict_score": 0.0,
+        "release_ready": true,
+        "evidence_sources": [
+          "dc_open_data_sample",
+          "osm_maxspeed",
+          "mapillary_compatible_sample",
+          "road_class_prior"
+        ],
+        "issue_flags": [],
+        "last_updated": "2026-01-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.0368,
+            38.9071
+          ],
+          [
+            -77.0362,
+            38.9076
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "dc_road_002",
+        "source": "overture_sample",
+        "road_name": "Sample Connector Avenue",
+        "road_class": "secondary",
+        "direction": "northbound",
+        "known_speed_limit": null,
+        "inferred_speed_limit": 35,
+        "speed_unit": "mph",
+        "confidence_score": 0.35,
+        "freshness_score": 1.0,
+        "conflict_score": 0.0,
+        "release_ready": false,
+        "evidence_sources": [
+          "mapillary_compatible_sample",
+          "road_class_prior"
+        ],
+        "issue_flags": [
+          "MISSING_SPEED_LIMIT",
+          "LOW_CONFIDENCE_INFERENCE",
+          "LOW_SIGN_MATCH_CONFIDENCE",
+          "OBSERVED_SPEED_ANOMALY"
+        ],
+        "last_updated": "2025-08-15"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -77.0372,
+            38.9068
+          ],
+          [
+            -77.0366,
+            38.9074
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "nyc_road_001",
+        "source": "nyc_open_data_sample",
+        "road_name": "Sample Brooklyn Street",
+        "road_class": "primary",
+        "direction": "both",
+        "known_speed_limit": 25,
+        "inferred_speed_limit": 25,
+        "speed_unit": "mph",
+        "confidence_score": 0.939,
+        "freshness_score": 0.703,
+        "conflict_score": 0.167,
+        "release_ready": true,
+        "evidence_sources": [
+          "nyc_open_data_sample",
+          "osm_maxspeed",
+          "road_class_prior"
+        ],
+        "issue_flags": [
+          "OBSERVED_SPEED_ANOMALY"
+        ],
+        "last_updated": "2024-06-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.9857,
+            40.7484
+          ],
+          [
+            -73.9849,
+            40.7489
+          ]
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "issue_count": 5,
+    "release_ready_count": 2
+  }
+}

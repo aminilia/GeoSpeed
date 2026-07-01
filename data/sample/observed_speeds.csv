@@ -1,0 +1,5 @@
+segment_id,timestamp,average_speed,percentile_50_speed,percentile_85_speed,source
+dc_road_001,2026-02-01T12:00:00Z,22.4,22.0,27.2,synthetic_trace_demo
+dc_road_002,2026-02-01T12:00:00Z,43.1,41.8,49.7,synthetic_trace_demo
+nyc_road_001,2026-02-01T12:00:00Z,32.0,31.1,38.6,nyc_open_speed_sample
+

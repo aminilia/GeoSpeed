@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "dc_road_001",
+        "source": "dc_open_data_sample",
+        "speed_limit": 25,
+        "speed_unit": "mph",
+        "last_updated": "2026-02-01"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-77.0368, 38.9071], [-77.0362, 38.9076]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": "nyc_road_001",
+        "source": "nyc_open_data_sample",
+        "speed_limit": 25,
+        "speed_unit": "mph",
+        "last_updated": "2025-12-20"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-73.9857, 40.7484], [-73.9849, 40.7489]]
+      }
+    }
+  ]
+}
+
