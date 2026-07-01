@@ -107,7 +107,8 @@ Place dashboard screenshots in `docs/assets/` as the UI evolves.
 
 GeoSpeed Auto FDE adds an open automotive partner-integration layer for Forward Deployed Engineering demos. It includes an in-vehicle head-unit simulator, partner issue triage API, launch-readiness workflow, COVESA VSS-style synthetic vehicle signals, ADAS mismatch scenarios, and infotainment debug views.
 
-This extension does not use proprietary Google or OEM SDKs. It is an SDK-style public simulator for portfolio demonstration.
+The Auto FDE extension demonstrates automotive partner-integration workflows for speed-limit intelligence, in-vehicle navigation, ADAS validation, vehicle-signal replay, partner issue triage, and launch readiness using an open SDK-style simulator and public/sample data.
+
 
 ```text
 Partner scenarios -> Vehicle Signals API -> Auto Head Unit Simulator
@@ -145,9 +146,4 @@ Geo Auto / FDE resume highlights:
 - ADAS speed-limit mismatch and infotainment rendering scenarios.
 - Launch readiness review process spanning data quality, SDK integration, and partner signoff.
 
-## Resume Highlights
 
-- Full-stack geospatial AI product architecture
-- Segment-level data-quality policy and release workflow
-- Polyglot implementation across Python, Java, C++, and TypeScript
-- Open-data-first design with synthetic fallback data for privacy-sensitive traces
