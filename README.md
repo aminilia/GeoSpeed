@@ -1,6 +1,7 @@
 # GeoSpeed AI Platform
 
-[![CI](https://github.com/amini/geospeed-ai-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/amini/geospeed-ai-platform/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/aminilia/GeoSpeed/actions/workflows/ci.yml/badge.svg)](https://github.com/aminilia/GeoSpeed/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 GeoSpeed AI Platform is a production-style geospatial AI and data-product monorepo for road speed-limit intelligence. It answers: what is the best available speed-limit value for each road segment, what evidence supports it, how confident are we, and is the segment ready for release into a production map-data product?
 
