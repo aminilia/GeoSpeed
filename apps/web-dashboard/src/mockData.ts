@@ -34,8 +34,8 @@ export type QualityIssue = {
 
 export const roadSegments: RoadSegment[] = [
   {
-    id: "seg-syn-001",
-    roadName: "Synthetic Main Street",
+    id: "seg-sample-001",
+    roadName: "Sample Main Street",
     roadClass: "residential",
     inferredSpeedLimit: 25,
     confidence: 0.94,
@@ -49,8 +49,8 @@ export const roadSegments: RoadSegment[] = [
     ]
   },
   {
-    id: "seg-syn-002",
-    roadName: "Synthetic Market Avenue",
+    id: "seg-sample-002",
+    roadName: "Sample Market Avenue",
     roadClass: "secondary",
     inferredSpeedLimit: 35,
     confidence: 0.81,
@@ -64,8 +64,8 @@ export const roadSegments: RoadSegment[] = [
     ]
   },
   {
-    id: "seg-syn-003",
-    roadName: "Synthetic River Road",
+    id: "seg-sample-003",
+    roadName: "Sample River Road",
     roadClass: "primary",
     inferredSpeedLimit: 45,
     confidence: 0.68,
@@ -79,8 +79,8 @@ export const roadSegments: RoadSegment[] = [
     ]
   },
   {
-    id: "seg-syn-004",
-    roadName: "Synthetic Service Lane",
+    id: "seg-sample-004",
+    roadName: "Sample Service Lane",
     roadClass: "service",
     inferredSpeedLimit: 15,
     confidence: 0.57,
@@ -97,67 +97,67 @@ export const roadSegments: RoadSegment[] = [
 
 export const trafficSigns: TrafficSign[] = [
   {
-    id: "sign-syn-001",
+    id: "sign-sample-001",
     label: "25 mph",
     signType: "speed_limit",
     coordinate: [-74.00628, 40.71274],
     detectionConfidence: 0.96,
-    segmentId: "seg-syn-001"
+    segmentId: "seg-sample-001"
   },
   {
-    id: "sign-syn-002",
+    id: "sign-sample-002",
     label: "35 mph",
     signType: "speed_limit",
     coordinate: [-74.00562, 40.71273],
     detectionConfidence: 0.84,
-    segmentId: "seg-syn-002"
+    segmentId: "seg-sample-002"
   },
   {
-    id: "sign-syn-003",
+    id: "sign-sample-003",
     label: "45 mph",
     signType: "speed_limit",
     coordinate: [-74.00641, 40.71253],
     detectionConfidence: 0.72,
-    segmentId: "seg-syn-003"
+    segmentId: "seg-sample-003"
   },
   {
-    id: "sign-syn-004",
+    id: "sign-sample-004",
     label: "15 mph",
     signType: "speed_limit",
     coordinate: [-74.00496, 40.71261],
     detectionConfidence: 0.63,
-    segmentId: "seg-syn-004"
+    segmentId: "seg-sample-004"
   }
 ];
 
 export const qualityIssues: QualityIssue[] = [
   {
-    id: "issue-syn-001",
-    segmentId: "seg-syn-002",
+    id: "issue-sample-001",
+    segmentId: "seg-sample-002",
     severity: "medium",
     title: "Trace p85 is 9 mph above inferred limit",
     owner: "Map QA",
     status: "triage"
   },
   {
-    id: "issue-syn-002",
-    segmentId: "seg-syn-003",
+    id: "issue-sample-002",
+    segmentId: "seg-sample-003",
     severity: "high",
     title: "Sign-to-road heading mismatch",
     owner: "Road Matching",
     status: "open"
   },
   {
-    id: "issue-syn-003",
-    segmentId: "seg-syn-003",
+    id: "issue-sample-003",
+    segmentId: "seg-sample-003",
     severity: "medium",
     title: "Sparse trace coverage after midnight",
     owner: "Data Quality",
     status: "open"
   },
   {
-    id: "issue-syn-004",
-    segmentId: "seg-syn-004",
+    id: "issue-sample-004",
+    segmentId: "seg-sample-004",
     severity: "critical",
     title: "Release gate failed for low confidence",
     owner: "Release Ops",
@@ -184,4 +184,3 @@ export function confidenceColor(confidence: number): string {
   }
   return "#c2410c";
 }
-

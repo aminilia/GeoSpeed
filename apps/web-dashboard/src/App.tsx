@@ -116,7 +116,7 @@ function OverviewPage({
         <PanelHeader title="Coverage" caption="Sample trace coverage by segment" />
         <BarChart
           values={roadSegments.map((segment) => ({
-            label: segment.id.replace("seg-syn-", "S"),
+            label: segment.id.replace("seg-sample-", "S"),
             value: segment.coverage,
             color: confidenceColor(segment.coverage)
           }))}

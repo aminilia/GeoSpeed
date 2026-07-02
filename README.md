@@ -107,9 +107,10 @@ The baseline inference engine prioritizes authoritative city or state speed-limi
 
 ## Screenshots
 
-- Web dashboard screenshot: `docs/assets/web-dashboard-overview.png`
-- Map explorer screenshot: `docs/assets/web-dashboard-map-explorer.png`
-- Release readiness screenshot: `docs/assets/release-readiness-review.png`
+- Dashboard overview: `docs/assets/dashboard-overview.png`
+- Map explorer: `docs/assets/map-explorer.png`
+- Auto head-unit simulator: `docs/assets/auto-headunit-simulator.png`
+- Partner issue triage: `docs/assets/partner-issue-triage.png`
 
 ## Roadmap
 
@@ -132,11 +133,10 @@ Partner scenarios -> Vehicle Signals API -> Auto Head Unit Simulator
                  -> GeoSpeed speed-limit quality data
 ```
 
-Screenshot placeholders:
+Auto FDE screenshots:
 
 - `docs/assets/auto-headunit-simulator.png`
 - `docs/assets/partner-issue-triage.png`
-- `docs/assets/launch-readiness-review.png`
 
 Auto/FDE quick start:
 
