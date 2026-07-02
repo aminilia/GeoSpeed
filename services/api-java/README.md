@@ -22,6 +22,7 @@ When the service is running:
 
 ```bash
 mvn test
+mvn package
 mvn spring-boot:run
 ```
 

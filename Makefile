@@ -13,6 +13,7 @@ lint:
 build:
 	cd apps/web-dashboard && npm run build
 	cd services/api-java && mvn package
+	cd services/partner-integration-java && mvn package
 	cmake -S services/matcher-cpp -B services/matcher-cpp/build
 	cmake --build services/matcher-cpp/build
 
@@ -21,6 +22,7 @@ test-web:
 
 test-java:
 	cd services/api-java && mvn test
+	cd services/partner-integration-java && mvn test
 
 test-python:
 	cd services/ml-python && python -m pip install -r requirements-dev.txt && python -m pytest
