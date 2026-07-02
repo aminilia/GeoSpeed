@@ -102,6 +102,7 @@ curl http://localhost:8000/health
 
 ![GeoSpeed dashboard](docs/assets/dashboard-overview.png)
 
+
 ### Partner Issue Triage
 
 ![Partner issue triage](docs/assets/partner-issue-triage.png)
@@ -117,8 +118,6 @@ The baseline inference engine prioritizes authoritative city or state speed-limi
 ## Screenshots
 
 - Dashboard overview: `docs/assets/dashboard-overview.png`
-- Map explorer: `docs/assets/map-explorer.png`
-- Auto head-unit simulator: `docs/assets/auto-headunit-simulator.png`
 - Partner issue triage: `docs/assets/partner-issue-triage.png`
 
 ## Roadmap
