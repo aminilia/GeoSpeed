@@ -6,22 +6,26 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc && vite build",
-    "test": "vitest"
+    "test": "vitest",
+    "screenshots": "tsx scripts/screenshots.ts"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "maplibre-gl": "^4.7.1",
-    "vite": "^6.0.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "vite": "^6.0.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@types/geojson": "^7946.0.15",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "jsdom": "^25.0.1",
+    "playwright": "^1.61.1",
+    "tsx": "^4.22.4",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }
