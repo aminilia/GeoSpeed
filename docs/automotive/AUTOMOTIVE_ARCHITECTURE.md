@@ -10,7 +10,7 @@ The Java service models partner scenarios, issues, feature requests, roadmap fee
 
 ## Vehicle Signal Service
 
-The Python service emits COVESA VSS-style synthetic vehicle signals and route replays.
+The Python service emits COVESA VSS-style simulated vehicle signals and route replays.
 
 ## Geospatial Speed-Limit API
 
@@ -23,4 +23,3 @@ The matcher provides deterministic road/sign matching primitives for high-throug
 ## Data Flow
 
 Scenario JSON -> vehicle signal replay -> partner debug API -> head-unit simulator -> launch-readiness review.
-

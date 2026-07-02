@@ -22,5 +22,4 @@ The simulator raises mismatch flags when cruise-control set speed exceeds the sp
 
 ## Limitations
 
-Signals are synthetic and intended for integration design, not vehicle certification.
-
+Signals are simulated and intended for integration design, not vehicle certification.

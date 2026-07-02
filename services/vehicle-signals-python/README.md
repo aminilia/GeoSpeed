@@ -16,5 +16,4 @@ FastAPI service that simulates COVESA VSS-style vehicle signals for GeoSpeed Aut
 uvicorn geospeed_vehicle.app:app --reload --host 0.0.0.0 --port 8010
 ```
 
-Signals are synthetic and designed for partner integration demos.
-
+Signals are simulated and designed for partner integration demos.

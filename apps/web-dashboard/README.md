@@ -1,6 +1,6 @@
 # web-dashboard
 
-React TypeScript dashboard for GeoSpeed synthetic speed-limit quality workflows.
+React TypeScript dashboard for GeoSpeed sample/open-data-compatible speed-limit quality workflows.
 
 ## Pages
 
@@ -24,4 +24,3 @@ npm run dev
 ```bash
 npm test -- --run
 ```
-

@@ -1,6 +1,6 @@
 # api-java
 
-Spring Boot REST API for GeoSpeed synthetic road quality workflows.
+Spring Boot REST API for GeoSpeed sample/open-data-compatible road quality workflows.
 
 ## Endpoints
 
@@ -25,4 +25,4 @@ mvn test
 mvn spring-boot:run
 ```
 
-The first repository implementation is intentionally in memory and uses only synthetic sample data.
+The first repository implementation is intentionally in memory and uses only small sample/open-data-compatible data.

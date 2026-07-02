@@ -35,7 +35,7 @@ Feature records -----> FastAPI ML baseline inference
 
 ## Data Sources
 
-The first demo uses small checked-in sample files under `data/sample`. The architecture is designed for later ingestion from:
+The first demo uses small checked-in sample files under `data/sample`. These are sample DC/NYC-style demo pipelines designed for public-data integration, not a claim that full jurisdiction-scale public datasets are currently bundled. The architecture is designed for later ingestion from:
 
 - OpenStreetMap roads and `maxspeed` tags
 - Overture Maps Transportation data
@@ -54,7 +54,7 @@ No proprietary or paid data is required.
 | Java product API | Implemented | Spring Boot API with Maven and OpenAPI support |
 | Partner integration API | Implemented | Partner scenarios, issues, triage, feature requests, launch readiness |
 | Python ML service | Implemented | FastAPI baseline speed-limit inference and evaluation |
-| Vehicle signals service | Implemented | FastAPI VSS-style synthetic signal replay for simulator use |
+| Vehicle signals service | Implemented | FastAPI VSS-style simulated signal replay for simulator use |
 | C++ matcher | Implemented | C++17 MapLibre-independent road/sign matching library and CLI |
 | Pipelines | Implemented | Sample ingestion, release candidate generation, validation, report |
 | Docker / CI | Implemented | Compose config validation, service tests/builds, pipeline smoke |
@@ -107,7 +107,9 @@ The baseline inference engine prioritizes authoritative city or state speed-limi
 
 ## Screenshots
 
-Place dashboard screenshots in `docs/assets/` as the UI evolves.
+- Web dashboard screenshot: `docs/assets/web-dashboard-overview.png`
+- Map explorer screenshot: `docs/assets/web-dashboard-map-explorer.png`
+- Release readiness screenshot: `docs/assets/release-readiness-review.png`
 
 ## Roadmap
 
@@ -160,11 +162,3 @@ Geo Auto / FDE resume highlights:
 - ADAS speed-limit mismatch and infotainment rendering scenarios.
 - Launch readiness review process spanning data quality, SDK integration, and partner signoff.
 
-
-<<<<<<< HEAD
-=======
-- Full-stack geospatial AI product architecture
-- Segment-level data-quality policy and release workflow
-- Polyglot implementation across Python, Java, C++, and TypeScript
-- Open-data-first design with synthetic fallback data only for privacy-sensitive traces and simulator examples
->>>>>>> 1ae1335 (fix some CIs)

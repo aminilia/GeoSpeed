@@ -1,0 +1,12 @@
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\controller\PartnerController.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\dto\CreateFeatureRequest.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\dto\CreateIssueRequest.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\dto\TriageIssueRequest.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\model\FeatureRequest.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\model\LaunchReadiness.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\model\Partner.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\model\PartnerIssue.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\model\PartnerScenario.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\PartnerIntegrationApplication.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\repository\PartnerRepository.java
+C:\Work\geospeed-ai-platform\services\partner-integration-java\src\main\java\com\geospeed\partner\service\PartnerService.java

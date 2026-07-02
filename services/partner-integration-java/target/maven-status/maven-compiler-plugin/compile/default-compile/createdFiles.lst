@@ -1,0 +1,12 @@
+com\geospeed\partner\model\PartnerScenario.class
+com\geospeed\partner\repository\PartnerRepository.class
+com\geospeed\partner\dto\CreateFeatureRequest.class
+com\geospeed\partner\model\FeatureRequest.class
+com\geospeed\partner\model\LaunchReadiness.class
+com\geospeed\partner\service\PartnerService.class
+com\geospeed\partner\dto\CreateIssueRequest.class
+com\geospeed\partner\model\Partner.class
+com\geospeed\partner\dto\TriageIssueRequest.class
+com\geospeed\partner\controller\PartnerController.class
+com\geospeed\partner\model\PartnerIssue.class
+com\geospeed\partner\PartnerIntegrationApplication.class

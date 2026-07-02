@@ -1,6 +1,6 @@
 # ml-python
 
-FastAPI service for baseline speed-limit inference using synthetic-safe inputs.
+FastAPI service for baseline speed-limit inference using sample/open-data-compatible inputs.
 
 ## Endpoints
 
@@ -32,4 +32,3 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```bash
 python -m pytest
 ```
-
