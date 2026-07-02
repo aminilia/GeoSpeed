@@ -13,12 +13,17 @@ Speed-limit data powers navigation, routing, driver assistance, map freshness pr
 
 ## Architecture
 
-```text
-Open data / samples -> Python pipelines -> release candidate GeoJSON
-                                      -> Java API -> React MapLibre dashboard
-Traffic signs -------> C++ matcher ----^
-Feature records -----> FastAPI ML baseline inference
-```
+![GeoSpeed AI Platform Architecture](docs/assets/architecture-diagram.png)
+
+### Architecture Summary
+
+| Layer | Components | Purpose |
+|---|---|---|
+| Data Sources | Open/sample road data, traffic sign observations, feature records, vehicle signals, partner scenarios | Provide road-network, speed-limit, sign, and automotive scenario inputs |
+| Processing & Intelligence | Python pipelines, C++ matcher, FastAPI ML inference, vehicle signal service | Ingest, transform, validate, match observations to roads, infer speed limits, and score confidence |
+| Product Services & Outputs | Release-candidate GeoJSON/data product, Java API, partner integration Java service | Publish segment-level speed-limit outputs, quality metrics, issue records, and launch-readiness data |
+| Applications | React MapLibre dashboard, Auto head-unit simulator, documentation and CI/CD | Visualize map-quality status, speed-limit intelligence, partner issues, and engineering workflows |
+| Engineering Foundation | Python, Java, C++, TypeScript, Docker, GitHub Actions | Support reproducible development, tests, builds, and deployment-style workflows |
 
 ## Tech Stack
 
@@ -157,3 +162,10 @@ make launch-readiness-report
 - Stronger sign-to-road matching and geometry indexing
 - Model monitoring and evaluation reports
 - Production storage, auth, observability, and deployment hardening
+
+## Contact
+
+If you want to discuss the project, request a walkthrough, or collaborate, feel free to reach out.
+
+Author  
+Amin Ilia (AI)

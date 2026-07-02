@@ -33,6 +33,10 @@ The demo uses file-backed sample GeoJSON and in-memory repositories. Production 
 
 The matcher provides heading-aware nearest-road matching for traffic sign observations. Keeping this logic in C++ demonstrates a path to high-throughput batch matching without coupling it to web APIs.
 
+## Architecture
+
+![GeoSpeed AI Platform Architecture](../assets/architecture-diagram.png)
+
 ## Failure Modes
 
 - Missing or stale source data.
