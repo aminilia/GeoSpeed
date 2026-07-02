@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import maplibregl from "maplibre-gl";
-import type { Feature, LineString } from "geojson";
+import maplibregl, { type GeoJSONSourceSpecification, type LineLayerSpecification } from "maplibre-gl";
+import type { Feature, LineString, Position } from "geojson";
 import {
   confidenceColor,
   qualityIssues,
@@ -9,6 +9,10 @@ import {
   trafficSigns
 } from "./mockData";
 import type { PageKey, RoadSegment } from "./mockData";
+
+type SegmentFeatureProperties = {
+  id: string;
+};
 
 const pages: { key: PageKey; label: string }[] = [
   { key: "overview", label: "Overview" },
@@ -264,19 +268,20 @@ function DashboardMap({
     map.on("load", () => {
       roadSegments.forEach((segment) => {
         const sourceId = `segment-${segment.id}`;
-        const segmentFeature: Feature<LineString, { id: string }> = {
+        const coordinates: Position[] = segment.polyline.map(([longitude, latitude]) => [longitude, latitude]);
+        const segmentFeature: Feature<LineString, SegmentFeatureProperties> = {
           type: "Feature",
           properties: { id: segment.id },
           geometry: {
             type: "LineString",
-            coordinates: segment.polyline
+            coordinates
           }
         };
-        map.addSource(sourceId, {
+        const segmentSource: GeoJSONSourceSpecification = {
           type: "geojson",
           data: segmentFeature
-        });
-        map.addLayer({
+        };
+        const segmentLayer: LineLayerSpecification = {
           id: sourceId,
           type: "line",
           source: sourceId,
@@ -285,7 +290,10 @@ function DashboardMap({
             "line-width": segment.id === selectedSegmentId ? 8 : 5,
             "line-opacity": segment.id === selectedSegmentId ? 0.95 : 0.72
           }
-        });
+        };
+
+        map.addSource(sourceId, segmentSource);
+        map.addLayer(segmentLayer);
         map.on("click", sourceId, () => onSelectSegment(segment.id));
       });
 
